@@ -1,5 +1,7 @@
 Product Requirements Document (PRD)
 
+(통합 구현 가이드는 `docs/integration-guide.md`를 참고하세요.)
+
 1. Goal and Overview
 
 The objective of this project is to build a manseyeok (萬歲曆) calculation module that can be integrated into a web‑app for Korean saju (사주) and fortune‑telling services.  Unlike “simplified” horoscope generators, manseyeok is based on the traditional lunisolar calendar and requires precise astronomical conversions to determine the four pillars (year, month, day and hour) and their associated heavenly stems and earthly branches.  The module must accept a user’s birth date and time (with timezone/location), call reliable data sources to convert Gregorian ↔ lunar dates, derive the stems/branches for year/month/day, compute the hour pillar and generate derived information (e.g. five‑element balance, ten gods, twelve life stages, great fortune cycles).  The result will be summarised and passed to a GPT model for narrative fortune generation.
